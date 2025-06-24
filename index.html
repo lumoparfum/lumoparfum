@@ -10,9 +10,9 @@
       padding: 0;
       box-sizing: border-box;
     }
-    body, html {
+    html, body {
       height: 100%;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
       color: white;
       text-align: center;
       overflow: hidden;
@@ -36,39 +36,45 @@
       background-color: rgba(0,0,0,0.4);
     }
     h1 {
-      font-size: 3.5em;
+      font-size: 4em;
       font-style: italic;
-      font-weight: bold;
+      font-weight: 600;
       color: #FFD700;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
     p {
-      font-size: 1.1em;
+      font-size: 1.2em;
       margin: 10px 0;
-      max-width: 600px;
+      max-width: 90%;
+      line-height: 1.6;
     }
     .highlight {
       color: #FFD700;
       font-weight: bold;
     }
     .social {
-      margin-top: 30px;
+      margin-top: 25px;
     }
     .social a {
-      margin: 0 10px;
+      margin: 0 12px;
       display: inline-block;
     }
     .social img {
-      width: 36px;
-      height: 36px;
+      width: 38px;
+      height: 38px;
       transition: transform 0.3s ease;
     }
     .social img:hover {
       transform: scale(1.1);
     }
+    .follow-text {
+      margin-top: 10px;
+      font-size: 0.95em;
+      color: #ddd;
+    }
     @media (max-width: 600px) {
       h1 {
-        font-size: 2.2em;
+        font-size: 2.8em;
       }
       p {
         font-size: 1em;
@@ -76,6 +82,9 @@
       .social img {
         width: 32px;
         height: 32px;
+      }
+      .follow-text {
+        font-size: 0.85em;
       }
     }
   </style>
@@ -104,6 +113,7 @@
       <a href="https://www.tiktok.com/@lumo.parfum" target="_blank">
         <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
       </a>
+      <div class="follow-text">Bizi takip etmeyi unutmayın!</div>
     </div>
   </div>
 </body>

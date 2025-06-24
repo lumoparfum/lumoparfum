@@ -2,53 +2,78 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>LUMO</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+
     body {
       margin: 0;
       padding: 0;
       background-color: #000;
       color: gold;
-      font-family: 'Helvetica Neue', sans-serif;
+      font-family: 'Cinzel', serif;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
-      min-height: 100vh;
+      align-items: center;
+      height: 100vh;
       text-align: center;
     }
-    img {
-      max-width: 200px;
-      margin-bottom: 30px;
+
+    .logo {
+      font-size: 64px;
+      font-weight: 700;
+      letter-spacing: 12px;
+      animation: fadeIn 2s ease forwards;
+      opacity: 0;
     }
-    h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
-    }
-    p {
+
+    .subtitle {
+      font-family: 'Helvetica Neue', sans-serif;
+      color: gold;
+      font-size: 18px;
+      margin-top: 20px;
       max-width: 600px;
-      font-size: 1.2em;
-      margin: 10px 0;
-      line-height: 1.6;
+      line-height: 1.7;
+      animation: fadeIn 3s ease forwards;
+      opacity: 0;
+      animation-delay: 1.5s;
     }
-    .soon {
+
+    .highlight {
       font-weight: bold;
-      margin-top: 30px;
-      font-size: 1.4em;
+      color: #ffd700;
+    }
+
+    .soon {
+      margin-top: 40px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #ffcc00;
+      animation: fadeIn 4s ease forwards;
+      opacity: 0;
+      animation-delay: 3s;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
     }
   </style>
 </head>
 <body>
-  <img src="logo.png" alt="LUMO logo" />
-  <h1>LUMO</h1>
-  <p>Parfüm sadece bir koku değil, bir hafızadır.<br>
-     Duyguların, anıların ve karakterin görünmeyen dili.</p>
-  <p>LUMO olarak biz, bu dili yeniden yazıyoruz.<br>
-     İlk etapta 5 ayrı ruhla karşınızdayız:<br>
-     <strong>Gece. Gündüz. Ateş. Zihin. Kış.</strong></p>
-  <p>Her biri; bir mevsimi, bir hissi ve bir insanı temsil ediyor.<br>
-     Kokunun devrimi başlıyor.</p>
+  <div class="logo">LUMO</div>
+  <div class="subtitle">
+    Parfüm sadece bir koku değil, bir hafızadır.<br>
+    Duyguların, anıların ve karakterin görünmeyen dili.<br><br>
+    LUMO olarak biz, bu dili yeniden yazıyoruz.<br>
+    İlk etapta 5 ayrı ruhla karşınızdayız:<br>
+    <span class="highlight">Gece. Gündüz. Ateş. Zihin. Kış.</span><br><br>
+    Her biri; bir mevsimi, bir hissi ve bir insanı temsil ediyor.<br>
+    Kokunun devrimi başlıyor.
+  </div>
   <div class="soon">Çok Yakında.</div>
 </body>
 </html>

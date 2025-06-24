@@ -1,71 +1,104 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LUMO</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=EB+Garamond&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'EB Garamond', serif; color: #f1e7c6; height: 100vh; overflow: hidden; position: relative; }
-    #bgVideo {
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Manrope', sans-serif;
+      color: #f5e7c4;
+      overflow: hidden;
+    }
+
+    .background-video {
       position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
       z-index: -1;
+      object-fit: cover;
+      filter: brightness(0.7);
     }
-    .wrapper {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      padding: 20px;
+
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       text-align: center;
-      background: rgba(0, 0, 0, 0.4); /* yarı şeffaf katman */
+      max-width: 90%;
     }
+
     .logo {
-      font-family: 'Cinzel Decorative', serif;
-      font-size: 5rem;
-      background: linear-gradient(45deg, #d4af37, #fff8dc);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: glow 3s infinite alternate;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 64px;
+      font-weight: 700;
+      color: gold;
+      text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+      margin-bottom: 20px;
     }
-    .content { max-width: 700px; line-height: 1.8; margin-top: 20px; font-size: 1.2rem; }
-    .highlight { color: #ffe066; font-weight: bold; }
-    .soon { margin-top: 30px; font-size: 1.5rem; color: #ffd700; animation: pulse 2s infinite; }
-    @keyframes glow {
-      from { text-shadow: 0 0 10px #d4af37; }
-      to { text-shadow: 0 0 20px #fff8dc, 0 0 30px #ffd700; }
+
+    .paragraph {
+      font-size: 16px;
+      line-height: 1.7;
+      margin: 5px 0;
+      color: #f7f3e9;
     }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.6; }
+
+    .highlight {
+      color: #ffcc33;
+      font-weight: 600;
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-weight: bold;
+      color: #f9e7aa;
+      font-size: 16px;
+    }
+
+    @media (max-width: 600px) {
+      .logo {
+        font-size: 40px;
+      }
+
+      .paragraph {
+        font-size: 14px;
+      }
     }
   </style>
 </head>
 <body>
-  <video autoplay muted loop playsinline id="bgVideo">
-    <source src="bg.mp4" type="video/mp4">
+
+  <video autoplay muted loop playsinline class="background-video">
+    <source src="bg.mp4" type="video/mp4" />
+    Tarayıcınız video etiketini desteklemiyor.
   </video>
-  <div class="wrapper">
+
+  <div class="content">
     <div class="logo">LUMO</div>
-    <div class="content">
-      <p>Parfüm sadece bir koku değil, bir <span class="highlight">hafızadır</span>.<br>
-      Duyguların, anıların ve karakterin görünmeyen dili.</p>
-      <p>LUMO olarak biz, bu dili yeniden yazıyoruz.<br>
-      İlk etapta 5 ayrı ruhla karşınızdayız:<br>
-      <span class="highlight">GECE. GÜNDÜZ. ATEŞ. ZİHİN. KIŞ.</span></p>
-      <p>Her biri; bir mevsimi, bir hissi ve bir insanı temsil ediyor.<br>
-      Kokunun devrimi başlıyor.</p>
-      <div class="soon">ÇOK YAKINDA.</div>
-    </div>
+
+    <div class="paragraph">Parfüm sadece bir koku değil, bir <span class="highlight">hafızadır</span>.</div>
+    <div class="paragraph">Duyguların, anıların ve karakterin görünmeyen dili.</div>
+    <div class="paragraph">LUMO olarak biz, bu dili yeniden yazıyoruz.</div>
+    <div class="paragraph">İlk etapta 5 ayrı ruhla karşınızdayız:</div>
+    <div class="paragraph"><span class="highlight">GECE. GÜNDÜZ. ATEŞ. ZİHİN. KIŞ.</span></div>
+    <div class="paragraph">Her biri; bir mevsimi, bir hissi ve bir insanı temsil ediyor.</div>
+    <div class="paragraph">Kokunun devrimi başlıyor.</div>
+
+    <div class="footer">ÇOK YAKINDA.</div>
   </div>
+
 </body>
 </html>

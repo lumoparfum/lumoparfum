@@ -4,10 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LUMO</title>
-
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Inter&display=swap" rel="stylesheet">
-  
   <style>
     * {
       margin: 0;
@@ -15,8 +12,9 @@
       box-sizing: border-box;
     }
 
-    body, html {
+    html, body {
       height: 100%;
+      width: 100%;
       font-family: 'Inter', sans-serif;
       color: white;
       overflow: hidden;
@@ -26,8 +24,8 @@
       position: fixed;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
+      width: 100vw;
+      height: 100vh;
       object-fit: cover;
       z-index: -1;
     }
@@ -38,9 +36,9 @@
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
-      padding: 0 10px;
-      width: 100%;
+      width: 90%;
       max-width: 600px;
+      padding: 20px;
     }
 
     .logo {
@@ -49,13 +47,13 @@
       font-style: italic;
       font-weight: 700;
       color: #FFD700;
-      margin-bottom: 20px;
-      text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+      margin-bottom: 25px;
+      text-shadow: 0 0 12px rgba(255, 215, 0, 0.5);
     }
 
     p {
       font-size: 1.1em;
-      margin: 10px 0;
+      margin: 8px 0;
       line-height: 1.6;
     }
 
@@ -68,10 +66,6 @@
       font-weight: bold;
     }
 
-    .footer {
-      margin-top: 20px;
-    }
-
     .socials {
       margin-top: 25px;
       display: flex;
@@ -80,8 +74,8 @@
     }
 
     .socials a img {
-      width: 30px;
-      height: 30px;
+      width: 32px;
+      height: 32px;
       transition: transform 0.2s ease;
     }
 
@@ -89,9 +83,14 @@
       transform: scale(1.15);
     }
 
-    @media (max-width: 600px) {
+    .footer {
+      margin-top: 15px;
+      font-size: 0.95em;
+    }
+
+    @media (max-width: 500px) {
       .logo {
-        font-size: 2.2em;
+        font-size: 2.4em;
       }
 
       p {
@@ -101,6 +100,10 @@
       .socials a img {
         width: 28px;
         height: 28px;
+      }
+
+      .footer {
+        font-size: 0.85em;
       }
     }
   </style>
@@ -131,10 +134,8 @@
         <img src="https://cdn-icons-png.flaticon.com/512/3046/3046120.png" alt="TikTok" />
       </a>
     </div>
-    
-    <div class="footer">
-      <p style="font-size: 0.9em;">Bizi takip etmeyi unutmayın!</p>
-    </div>
+
+    <div class="footer">Bizi takip etmeyi unutmayın!</div>
   </div>
 </body>
 </html>

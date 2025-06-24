@@ -1,76 +1,71 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LUMO</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=EB+Garamond&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      background: radial-gradient(circle at center, #0a0a0a, #000000 80%);
-      color: #d4af37;
-      font-family: 'Cinzel Decorative', serif;
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'EB Garamond', serif; color: #f1e7c6; height: 100vh; overflow: hidden; position: relative; }
+    #bgVideo {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    .wrapper {
+      position: relative;
+      z-index: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      height: 100%;
+      padding: 20px;
       text-align: center;
-      animation: fadeIn 2s ease-in-out;
+      background: rgba(0, 0, 0, 0.4); /* yarı şeffaf katman */
     }
-
-    h1 {
-      font-size: 5em;
-      margin-bottom: 0.5em;
+    .logo {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 5rem;
       background: linear-gradient(45deg, #d4af37, #fff8dc);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      animation: glow 3s ease-in-out infinite alternate;
+      animation: glow 3s infinite alternate;
     }
-
-    p {
-      max-width: 600px;
-      font-size: 1.2em;
-      line-height: 1.8em;
-      color: #f1e7c6;
-    }
-
-    .highlight {
-      font-weight: bold;
-      color: #ffe066;
-    }
-
+    .content { max-width: 700px; line-height: 1.8; margin-top: 20px; font-size: 1.2rem; }
+    .highlight { color: #ffe066; font-weight: bold; }
+    .soon { margin-top: 30px; font-size: 1.5rem; color: #ffd700; animation: pulse 2s infinite; }
     @keyframes glow {
-      from {
-        text-shadow: 0 0 5px #d4af37, 0 0 10px #d4af37;
-      }
-      to {
-        text-shadow: 0 0 15px #ffd700, 0 0 30px #ffd700;
-      }
+      from { text-shadow: 0 0 10px #d4af37; }
+      to { text-shadow: 0 0 20px #fff8dc, 0 0 30px #ffd700; }
     }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
     }
   </style>
 </head>
 <body>
-  <h1>LUMO</h1>
-  <p>Parfüm sadece bir koku değil, bir <span class="highlight">hafızadır</span>.<br>
-  Duyguların, anıların ve karakterin görünmeyen dili.</p>
-  <p>LUMO olarak biz, bu dili yeniden yazıyoruz.<br>
-  İlk etapta 5 ayrı ruhla karşınızdayız:<br>
-  <span class="highlight">Gece. Gündüz. Ateş. Zihin. Kış.</span></p>
-  <p>Her biri; bir mevsimi, bir hissi ve bir insanı temsil ediyor.<br>
-  Kokunun devrimi başlıyor.<br><br>
-  <strong>Çok Yakında.</strong></p>
+  <video autoplay muted loop playsinline id="bgVideo">
+    <source src="bg.mp4" type="video/mp4">
+  </video>
+  <div class="wrapper">
+    <div class="logo">LUMO</div>
+    <div class="content">
+      <p>Parfüm sadece bir koku değil, bir <span class="highlight">hafızadır</span>.<br>
+      Duyguların, anıların ve karakterin görünmeyen dili.</p>
+      <p>LUMO olarak biz, bu dili yeniden yazıyoruz.<br>
+      İlk etapta 5 ayrı ruhla karşınızdayız:<br>
+      <span class="highlight">GECE. GÜNDÜZ. ATEŞ. ZİHİN. KIŞ.</span></p>
+      <p>Her biri; bir mevsimi, bir hissi ve bir insanı temsil ediyor.<br>
+      Kokunun devrimi başlıyor.</p>
+      <div class="soon">ÇOK YAKINDA.</div>
+    </div>
+  </div>
 </body>
 </html>

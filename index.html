@@ -2,123 +2,105 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>LUMO</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Lora:ital@1&display=swap" rel="stylesheet">
+  
+  <!-- Yazı Fontları -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Stil -->
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-    html, body {
+
+    body, html {
       height: 100%;
-      font-family: 'Lora', serif;
-      color: #fff;
-    }
-    body {
       overflow: hidden;
+      font-family: 'Inter', sans-serif;
+      color: white;
+      text-align: center;
     }
-    .background-video {
+
+    video.bg {
       position: fixed;
       top: 0;
       left: 0;
-      width: 100vw;
-      height: 100vh;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
       z-index: -1;
-      pointer-events: none;
     }
-    .background-video iframe {
-      width: 100%;
-      height: 100%;
-    }
+
     .content {
       position: relative;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 20px;
-      background: rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(4px);
-      animation: fadeIn 2s ease-in-out;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 0 10px;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    h1 {
+
+    h1.logo {
       font-family: 'Cinzel', serif;
       font-size: 64px;
       color: #FFD700;
-      text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
-      margin-bottom: 10px;
+      text-shadow: 0 0 20px #FFD700;
+      margin-bottom: 20px;
     }
-    h2 {
-      font-size: 20px;
-      color: #eee;
-      margin-bottom: 25px;
-      font-style: italic;
-    }
+
     p {
-      max-width: 700px;
-      font-size: 18px;
+      font-size: 20px;
       line-height: 1.6;
-      color: #f0f0f0;
+      max-width: 800px;
+      margin: 10px auto;
     }
+
     .highlight {
-      color: #f3c623;
-      font-weight: bold;
+      color: #FFD700;
+      font-weight: 600;
     }
-    .emphasis {
-      color: #a3ffb3;
-      font-weight: bold;
+
+    .tagline {
+      font-style: italic;
+      margin-bottom: 30px;
     }
-    .soon {
+
+    .footer {
+      font-weight: 600;
       margin-top: 30px;
-      font-weight: bold;
-      color: #facc15;
-      font-size: 18px;
-    }
-    @media screen and (max-width: 768px) {
-      h1 { font-size: 44px; }
-      p { font-size: 16px; }
-      .soon { font-size: 16px; }
+      color: #FFD700;
     }
   </style>
 </head>
+
 <body>
+  <!-- Arka Plan Video -->
+  <video class="bg" autoplay loop muted playsinline>
+    <source src="bg.mp4" type="video/mp4">
+  </video>
 
-  <div class="background-video">
-    <iframe src="https://www.youtube.com/embed/S_XguXg01HY?autoplay=1&mute=1&controls=0&loop=1&playlist=S_XguXg01HY&modestbranding=1&showinfo=0&rel=0" 
-            frameborder="0"
-            allow="autoplay; encrypted-media"
-            allowfullscreen>
-    </iframe>
-  </div>
+  <!-- Fon Müziği (sessiz başlar) -->
+  <audio autoplay loop>
+    <source src="muzik.mp3" type="audio/mpeg">
+  </audio>
 
+  <!-- Ana İçerik -->
   <div class="content">
-    <h1>LUMO</h1>
-    <h2>Bir koku değil... bir başlangıç.</h2>
-    <p>
-      Parfüm sadece bir koku değil, bir <span class="highlight">hafızadır</span>.<br>
-      Duyguların, anıların ve karakterin görünmeyen dili.
-    </p>
-    <br>
-    <p>
-      LUMO olarak biz, bu dili yeniden yazıyoruz.<br>
-      İlk etapta 5 ayrı ruhla karşınızdayız:<br>
-      <span class="emphasis">Gece. Gündüz. Ateş. Zihin. Kış.</span>
-    </p>
-    <br>
-    <p>
-      Her biri; bir mevsimi, bir hissi ve bir insanı temsil ediyor.<br>
-      Kokunun devrimi başlıyor.
-    </p>
-    <div class="soon">ÇOK YAKINDA.</div>
-  </div>
+    <h1 class="logo">LUMO</h1>
+    <p class="tagline">Bir koku değil... bir başlangıç.</p>
 
+    <p>Parfüm sadece bir koku değil, bir <span class="highlight">hafızadır</span>.<br>
+    Duyguların, anıların ve karakterin görünmeyen dili.</p>
+
+    <p>LUMO olarak biz, bu dili yeniden yazıyoruz.<br>
+    İlk etapta 5 ayrı ruhla karşınızdayız:<br>
+    <span class="highlight">Gece. Gündüz. Ateş. Zihin. Kış.</span></p>
+
+    <p>Her biri; bir mevsimi, bir hissi ve bir insanı temsil ediyor.<br>
+    Kokunun devrimi başlıyor.</p>
+
+    <p class="footer">ÇOK YAKINDA.</p>
+  </div>
 </body>
 </html>

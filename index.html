@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>LUMO</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -14,91 +13,87 @@
 
     body, html {
       height: 100%;
-      font-family: 'Manrope', sans-serif;
-      color: #f5e7c4;
+      font-family: 'Lora', serif;
+      color: white;
       overflow: hidden;
     }
 
-    .background-video {
+    video#bg {
       position: fixed;
-      right: 0;
-      bottom: 0;
+      top: 0;
+      left: 0;
       min-width: 100%;
       min-height: 100%;
       z-index: -1;
       object-fit: cover;
-      filter: brightness(0.7);
     }
 
     .content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      max-width: 90%;
+      padding: 0 20px;
     }
 
     .logo {
-      font-family: 'Playfair Display', serif;
-      font-style: italic;
-      font-size: 64px;
-      font-weight: 700;
+      font-family: 'Cinzel', serif;
+      font-size: 80px;
       color: gold;
-      text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
       margin-bottom: 20px;
+      letter-spacing: 4px;
     }
 
-    .paragraph {
-      font-size: 16px;
-      line-height: 1.7;
-      margin: 5px 0;
-      color: #f7f3e9;
+    .tagline {
+      font-size: 22px;
+      color: #f2f2f2;
+      margin-bottom: 50px;
+      font-style: italic;
+    }
+
+    .description {
+      max-width: 900px;
+      font-size: 18px;
+      line-height: 1.8;
+      color: #eeeeee;
+      font-style: normal;
     }
 
     .highlight {
-      color: #ffcc33;
-      font-weight: 600;
-    }
-
-    .footer {
-      margin-top: 30px;
+      color: #ffd700;
       font-weight: bold;
-      color: #f9e7aa;
-      font-size: 16px;
     }
 
-    @media (max-width: 600px) {
-      .logo {
-        font-size: 40px;
-      }
-
-      .paragraph {
-        font-size: 14px;
-      }
+    .very-soon {
+      margin-top: 40px;
+      font-size: 18px;
+      color: #f1c40f;
+      font-weight: bold;
+      letter-spacing: 1px;
     }
+
   </style>
 </head>
 <body>
-
-  <video autoplay muted loop playsinline class="background-video">
-    <source src="bg.mp4" type="video/mp4" />
-    Tarayıcınız video etiketini desteklemiyor.
+  <video autoplay muted loop id="bg">
+    <source src="bg.mp4" type="video/mp4">
   </video>
 
   <div class="content">
     <div class="logo">LUMO</div>
-
-    <div class="paragraph">Parfüm sadece bir koku değil, bir <span class="highlight">hafızadır</span>.</div>
-    <div class="paragraph">Duyguların, anıların ve karakterin görünmeyen dili.</div>
-    <div class="paragraph">LUMO olarak biz, bu dili yeniden yazıyoruz.</div>
-    <div class="paragraph">İlk etapta 5 ayrı ruhla karşınızdayız:</div>
-    <div class="paragraph"><span class="highlight">GECE. GÜNDÜZ. ATEŞ. ZİHİN. KIŞ.</span></div>
-    <div class="paragraph">Her biri; bir mevsimi, bir hissi ve bir insanı temsil ediyor.</div>
-    <div class="paragraph">Kokunun devrimi başlıyor.</div>
-
-    <div class="footer">ÇOK YAKINDA.</div>
+    <div class="tagline">Bir koku değil… bir başlangıç.</div>
+    <div class="description">
+      Parfüm sadece bir koku değil, bir <span class="highlight">hafızadır</span>.<br>
+      Duyguların, anıların ve karakterin görünmeyen dili.<br><br>
+      LUMO olarak biz, bu dili yeniden yazıyoruz.<br>
+      İlk etapta 5 ayrı ruhla karşınızdayız:<br>
+      <span class="highlight">Gece. Gündüz. Ateş. Zihin. Kış.</span><br><br>
+      Her biri; bir mevsimi, bir hissi ve bir insanı temsil ediyor.<br>
+      Kokunun devrimi başlıyor.
+    </div>
+    <div class="very-soon">ÇOK YAKINDA.</div>
   </div>
-
 </body>
 </html>

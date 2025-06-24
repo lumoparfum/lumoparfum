@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>LUMO Parfum</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <title>LUMO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Inter&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
     * {
       margin: 0;
@@ -14,9 +15,9 @@
 
     body, html {
       height: 100%;
-      overflow: hidden;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Inter', sans-serif;
       color: white;
+      overflow: hidden;
     }
 
     .bg-video {
@@ -36,75 +37,89 @@
       transform: translate(-50%, -50%);
       text-align: center;
       padding: 20px;
+      width: 90%;
+      max-width: 800px;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 12px;
     }
 
     .logo {
       font-family: 'Playfair Display', serif;
-      font-size: 64px;
+      font-size: 56px;
       font-style: italic;
-      color: #FFD700;
       margin-bottom: 20px;
-      letter-spacing: 3px;
+      color: gold;
     }
 
     .paragraph {
-      font-size: 20px;
-      max-width: 600px;
-      margin: 0 auto 40px;
+      font-size: 18px;
       line-height: 1.6;
+      margin-bottom: 30px;
     }
 
     .social {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
       margin-top: 10px;
     }
 
     .social a {
       color: white;
-      font-size: 20px;
+      margin: 0 15px;
+      font-size: 28px;
       text-decoration: none;
-      transition: color 0.3s;
+      transition: color 0.3s ease;
     }
 
     .social a:hover {
-      color: #FFD700;
+      color: gold;
+    }
+
+    .follow-text {
+      font-size: 14px;
+      margin-top: 8px;
+      color: #ccc;
     }
 
     @media (max-width: 768px) {
       .logo {
-        font-size: 40px;
+        font-size: 38px;
       }
 
       .paragraph {
         font-size: 16px;
-        padding: 0 10px;
       }
 
       .social a {
-        font-size: 18px;
+        font-size: 24px;
       }
     }
   </style>
 </head>
 <body>
-  <video autoplay muted loop class="bg-video">
-    <source src="bg.mp4" type="video/mp4">
+
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="bg.mp4" type="video/mp4" />
+    Tarayıcınız video etiketini desteklemiyor.
   </video>
 
   <div class="content">
     <div class="logo">LUMO</div>
     <div class="paragraph">
-      Parfüm dünyasında yeni bir çağ başlıyor.<br>
-      Global koku devrimi başlıyor: <strong>5 özel seri</strong><br>
-      GECE No.1 - GÜNDÜZ No.2 - ATEŞ No.3 - ZİHİN No.4 - KIŞ No.5
+      Bir koku değil... bir başlangıç.<br>
+      Parfüm sadece bir koku değil, bir hafızadır.<br>
+      Duyguların, anıların ve karakterin görünmeyen dili.<br>
+      <strong>LUMO</strong> olarak biz, bu dili yeniden yazıyoruz.<br>
+      İlk etapta 5 ayrı ruhla karşınızdayız:<br>
+      <strong>Gece. Gündüz. Ateş. Zihin. Kış.</strong><br>
+      Her biri; bir mevsimi, bir hissi ve bir insanı temsil ediyor.<br>
+      <strong>Kokunun devrimi başlıyor.</strong><br>
+      <strong>ÇOK YAKINDA.</strong>
     </div>
-
     <div class="social">
-      <a href="https://www.instagram.com/lumoparfum" target="_blank">Instagram</a>
-      <a href="https://www.tiktok.com/@lumo.parfum" target="_blank">TikTok</a>
+      <a href="https://www.instagram.com/lumoparfum" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@lumo.parfum" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <div class="follow-text">Bizi takip etmeyi unutmayın!</div>
     </div>
   </div>
+
 </body>
 </html>

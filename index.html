@@ -5,11 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>LUMO Parfum</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body, html {
       height: 100%;
@@ -28,7 +24,7 @@
     }
 
     .content {
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -42,19 +38,26 @@
       font-family: 'Georgia', serif;
       font-style: italic;
       color: #FFD700;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
 
-    .tagline {
+    .paragraph {
+      font-size: 18px;
+      line-height: 1.6;
+      max-width: 800px;
+      margin-bottom: 25px;
+    }
+
+    .highlight {
+      color: #FFD700;
+      font-weight: bold;
+    }
+
+    .footer-line {
       font-size: 20px;
-      margin-bottom: 10px;
-      color: white;
-    }
-
-    .footer {
-      font-size: 16px;
-      margin-top: 30px;
-      color: #ccc;
+      color: #FFD700;
+      margin-top: 10px;
+      font-weight: bold;
     }
 
     .social {
@@ -85,8 +88,8 @@
 
     @media (max-width: 768px) {
       .logo { font-size: 36px; }
-      .tagline { font-size: 16px; }
-      .footer { font-size: 14px; }
+      .paragraph { font-size: 16px; }
+      .footer-line { font-size: 18px; }
     }
   </style>
 </head>
@@ -100,9 +103,22 @@
   <!-- Merkez İçerik -->
   <div class="content">
     <div class="logo">LUMO</div>
-    <p class="tagline">Parfümde devrim başlıyor.</p>
-    <p class="tagline">Global etki yaratacak 5 serilik koleksiyon</p>
-    <p class="footer">ÇOK YAKINDA</p>
+
+    <div class="paragraph">
+      Bir koku değil… bir başlangıç.<br><br>
+
+      Parfüm sadece bir koku değil, bir <span class="highlight">hafızadır</span>.<br>
+      Duyguların, anıların ve karakterin görünmeyen dili.<br><br>
+
+      LUMO olarak biz, bu dili yeniden yazıyoruz.<br>
+      İlk etapta 5 ayrı ruhla karşınızdayız:<br>
+      <span class="highlight">Gece. Gündüz. Ateş. Zihin. Kış.</span><br><br>
+
+      Her biri; bir mevsimi, bir hissi ve bir insanı temsil ediyor.<br>
+      Kokunun devrimi başlıyor.
+    </div>
+
+    <div class="footer-line">ÇOK YAKINDA.</div>
   </div>
 
   <!-- Sosyal Medya (Alta Sabit) -->

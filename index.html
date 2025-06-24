@@ -2,17 +2,12 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LUMO</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Inter&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body, html {
       height: 100%;
       font-family: 'Inter', sans-serif;
@@ -20,52 +15,51 @@
       overflow: hidden;
     }
 
-    .bg-video {
+    video.bg {
       position: fixed;
       top: 0;
       left: 0;
-      width: 100vw;
-      height: 100vh;
+      min-width: 100vw;
+      min-height: 100vh;
       object-fit: cover;
       z-index: -1;
     }
 
-    .content {
+    .container {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
-      padding: 20px;
       width: 90%;
-      max-width: 800px;
-      background: rgba(0, 0, 0, 0.5);
-      border-radius: 12px;
+      max-width: 850px;
     }
 
-    .logo {
+    h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 56px;
       font-style: italic;
-      margin-bottom: 20px;
+      font-size: 64px;
       color: gold;
+      margin-bottom: 40px;
     }
 
-    .paragraph {
+    p {
       font-size: 18px;
-      line-height: 1.6;
-      margin-bottom: 30px;
+      line-height: 1.7;
+      margin-bottom: 10px;
     }
+
+    .bold { font-weight: 600; color: #fff; }
+    .highlight { color: gold; font-weight: bold; }
 
     .social {
-      margin-top: 10px;
+      margin-top: 40px;
     }
 
     .social a {
-      color: white;
       margin: 0 15px;
+      color: white;
       font-size: 28px;
-      text-decoration: none;
       transition: color 0.3s ease;
     }
 
@@ -74,46 +68,36 @@
     }
 
     .follow-text {
+      margin-top: 10px;
       font-size: 14px;
-      margin-top: 8px;
       color: #ccc;
     }
 
     @media (max-width: 768px) {
-      .logo {
-        font-size: 38px;
-      }
-
-      .paragraph {
-        font-size: 16px;
-      }
-
-      .social a {
-        font-size: 24px;
-      }
+      h1 { font-size: 42px; }
+      p { font-size: 16px; }
+      .social a { font-size: 24px; }
     }
   </style>
 </head>
 <body>
 
-  <video autoplay muted loop playsinline class="bg-video">
-    <source src="bg.mp4" type="video/mp4" />
-    Tarayıcınız video etiketini desteklemiyor.
+  <video autoplay muted loop playsinline class="bg">
+    <source src="bg.mp4" type="video/mp4">
   </video>
 
-  <div class="content">
-    <div class="logo">LUMO</div>
-    <div class="paragraph">
-      Bir koku değil... bir başlangıç.<br>
-      Parfüm sadece bir koku değil, bir hafızadır.<br>
-      Duyguların, anıların ve karakterin görünmeyen dili.<br>
-      <strong>LUMO</strong> olarak biz, bu dili yeniden yazıyoruz.<br>
-      İlk etapta 5 ayrı ruhla karşınızdayız:<br>
-      <strong>Gece. Gündüz. Ateş. Zihin. Kış.</strong><br>
-      Her biri; bir mevsimi, bir hissi ve bir insanı temsil ediyor.<br>
-      <strong>Kokunun devrimi başlıyor.</strong><br>
-      <strong>ÇOK YAKINDA.</strong>
-    </div>
+  <div class="container">
+    <h1>LUMO</h1>
+    <p>Bir koku değil... bir başlangıç.</p>
+    <p>Parfüm sadece bir koku değil, bir <span class="highlight">hafızadır</span>.</p>
+    <p>Duyguların, anıların ve karakterin görünmeyen dili.</p>
+    <p><span class="bold">LUMO</span> olarak biz, bu dili yeniden yazıyoruz.</p>
+    <p>İlk etapta 5 ayrı ruhla karşınızdayız:</p>
+    <p><span class="highlight">Gece. Gündüz. Ateş. Zihin. Kış.</span></p>
+    <p>Her biri; bir mevsimi, bir hissi ve bir insanı temsil ediyor.</p>
+    <p><span class="bold">Kokunun devrimi başlıyor.</span></p>
+    <p><span class="bold">ÇOK YAKINDA.</span></p>
+
     <div class="social">
       <a href="https://www.instagram.com/lumoparfum" target="_blank"><i class="fab fa-instagram"></i></a>
       <a href="https://www.tiktok.com/@lumo.parfum" target="_blank"><i class="fab fa-tiktok"></i></a>

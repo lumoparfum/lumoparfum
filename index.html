@@ -11,10 +11,12 @@
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       box-sizing: border-box;
     }
+
     body, html {
       height: 100%;
-      overflow: hidden;
+      background-color: black;
     }
+
     #bgVideo {
       position: fixed;
       right: 0;
@@ -24,60 +26,99 @@
       z-index: -1;
       object-fit: cover;
     }
+
     .content {
       position: relative;
-      height: 100%;
       width: 100%;
       color: white;
       text-align: center;
-      padding: 5vw;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      padding: 5vw 2vw 2vw;
     }
+
     h1 {
-      font-size: 3em;
+      font-size: 4em;
       font-style: italic;
       font-weight: bold;
       color: #FFD700;
-      text-shadow: 0 0 10px rgba(0,0,0,0.6);
+      text-shadow: 0 0 20px rgba(0,0,0,0.6);
       margin-bottom: 1em;
     }
+
     p {
       font-size: 1.2em;
       margin: 0.6em 0;
     }
+
     .highlight {
       color: #FFD700;
       font-weight: bold;
     }
+
     .social-icons {
       margin-top: 2em;
     }
+
     .social-icons a {
       margin: 0 1em;
     }
+
     .social-icons img {
       width: 40px;
       height: 40px;
     }
+
     .follow-text {
       margin-top: 0.5em;
       font-size: 0.9em;
       color: #ccc;
     }
 
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      text-align: center;
+      max-width: 1400px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .product {
+      width: 250px;
+    }
+
+    .product img {
+      width: 100%;
+    }
+
+    .product h3 {
+      margin: 0.6em 0 0.4em;
+      font-size: 1.1em;
+      color: #fff;
+    }
+
+    .product p {
+      font-size: 14px;
+      color: #ccc;
+    }
+
     @media (max-width: 768px) {
       h1 {
-        font-size: 2em;
+        font-size: 2.5em;
       }
+
       p {
         font-size: 1em;
       }
+
       .social-icons img {
         width: 35px;
         height: 35px;
+      }
+
+      .product {
+        width: 90%;
       }
     }
   </style>
@@ -110,39 +151,37 @@
       <div class="follow-text">Bizi takip etmeyi unutmayın!</div>
     </div>
   </div>
+
+  <div class="products">
+    <div class="product">
+      <img src="https://raw.githubusercontent.com/lumoparfum/lumoparfum/main/gece.png" alt="Gece No.1" />
+      <h3>Gece No.1</h3>
+      <p>Şehir sessizliğe bürünürken, derin ve karizmatik bir iz bırakır. Gecenin kendisi gibi gizemli ve çekici.</p>
+    </div>
+
+    <div class="product">
+      <img src="https://raw.githubusercontent.com/lumoparfum/lumoparfum/main/gündüz.png" alt="Gündüz No.2" />
+      <h3>Gündüz No.2</h3>
+      <p>Yeni bir günün taze enerjisi. Temiz, doğal ve ışıkla dans eden bir ferahlık hissi sunar.</p>
+    </div>
+
+    <div class="product">
+      <img src="https://raw.githubusercontent.com/lumoparfum/lumoparfum/main/ateş.png" alt="Ateş No.3" />
+      <h3>Ateş No.3</h3>
+      <p>İçinde taşıdığın tutkuyu serbest bırakır. Sıcak, iddialı ve asla unutulmayacak bir etki.</p>
+    </div>
+
+    <div class="product">
+      <img src="https://raw.githubusercontent.com/lumoparfum/lumoparfum/main/zihin.png" alt="Zihin No.4" />
+      <h3>Zihin No.4</h3>
+      <p>Sadelikten gelen bir zarafet. Dingin ama güçlü, düşündürürken büyüleyen bir karakter.</p>
+    </div>
+
+    <div class="product">
+      <img src="https://raw.githubusercontent.com/lumoparfum/lumoparfum/main/kış.png" alt="Kış No.5" />
+      <h3>Kış No.5</h3>
+      <p>Soğuk havada yakıcı bir dokunuş. Derin, sakin ve klasik bir kış imzası.</p>
+    </div>
+  </div>
 </body>
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; font-family: sans-serif; text-align: center; max-width: 1400px; margin: auto; padding: 20px;">
-
-  <div style="width: 250px;">
-    <img src="https://raw.githubusercontent.com/lumoparfum/lumoparfum/main/gece.png" alt="LUMO Gece No.1" style="width: 100%;">
-    <h3>LUMO Gece No.1</h3>
-    <p style="font-size: 14px;">Şehir sessizliğe bürünürken, derin ve karizmatik bir iz bırakır. Gecenin kendisi gibi gizemli ve çekici.</p>
-  </div>
-
-  <div style="width: 250px;">
-    <img src="https://raw.githubusercontent.com/lumoparfum/lumoparfum/main/gündüz.png" alt="LUMO Gündüz No.2" style="width: 100%;">
-    <h3>LUMO Gündüz No.2</h3>
-    <p style="font-size: 14px;">Yeni bir günün taze enerjisi. Temiz, doğal ve ışıkla dans eden bir ferahlık hissi sunar.</p>
-  </div>
-
-  <div style="width: 250px;">
-    <img src="https://raw.githubusercontent.com/lumoparfum/lumoparfum/main/ateş.png" alt="LUMO Ateş No.3" style="width: 100%;">
-    <h3>LUMO Ateş No.3</h3>
-    <p style="font-size: 14px;">İçinde taşıdığın tutkuyu serbest bırakır. Sıcak, iddialı ve asla unutulmayacak bir etki.</p>
-  </div>
-
-  <div style="width: 250px;">
-    <img src="https://raw.githubusercontent.com/lumoparfum/lumoparfum/main/zihin.png" alt="LUMO Zihin No.4" style="width: 100%;">
-    <h3>LUMO Zihin No.4</h3>
-    <p style="font-size: 14px;">Sadelikten gelen bir zarafet. Dingin ama güçlü, düşündürürken büyüleyen bir karakter.</p>
-  </div>
-
-  <div style="width: 250px;">
-    <img src="https://raw.githubusercontent.com/lumoparfum/lumoparfum/main/kış.png" alt="LUMO Kış No.5" style="width: 100%;">
-    <h3>LUMO Kış No.5</h3>
-    <p style="font-size: 14px;">Soğuk havada yakıcı bir dokunuş. Derin, sakin ve klasik bir kış imzası.</p>
-  </div>
-
-</div>
-
 </html>
